@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- =========================================================
+    PORTFÓLIO - Gabriel Oliveira Duarte
+    Estilo: dark premium, neon glow, glassmorphism, responsivo
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Oliveira Duarte | Portfólio</title>
+  <meta name="description" content="Portfólio profissional de Gabriel Oliveira Duarte - Desenvolvimento de Sistemas, Back-end e Engenharia de Software." />
+
+  <!-- Open Graph (opcional) -->
+  <meta property="og:title" content="Gabriel Oliveira Duarte | Portfólio" />
+  <meta property="og:description" content="Portfólio moderno, tecnológico e premium (dark + neon)." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts (leve e moderna) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Ícones (Font Awesome - CDN leve) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Partículas (canvas) -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Skip link (acessibilidade) -->
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- Navbar fixa -->
+  <header class="header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <span class="brand__mark">G</span>
+        <span class="brand__text">Gabriel</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio">Início</a></li>
+          <li><a class="nav__link" href="#sobre">Sobre</a></li>
+          <li><a class="nav__link" href="#projetos">Projetos</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#formacao">Formação</a></li>
+          <li><a class="nav__link" href="#contato">Contato</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Alternar tema">
+            <i class="fa-solid fa-moon"></i>
+            <span class="sr-only">Alternar tema</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- =========================================================
+      HERO (impactante)
+    ========================================================== -->
+    <section class="hero container section" aria-label="Seção de apresentação">
+      <div class="hero__grid">
+        <div class="hero__content reveal">
+          <div class="badge">
+            <span class="badge__dot"></span>
+            <span>Disponível para oportunidades</span>
+          </div>
+
+          <h1 class="hero__title">
+            Gabriel Oliveira Duarte
+          </h1>
+
+          <!-- Typewriter: o JS preenche -->
+          <p class="hero__subtitle">
+            <span id="typewriter" class="typewriter" aria-label="Título com efeito de digitação"></span>
+            <span class="typewriter__cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__lead">
+            Construo soluções com foco em dados e aplicação prática em projetos reais,
+            sempre buscando evolução contínua e excelência técnica.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projetos">
+              <i class="fa-solid fa-diagram-project"></i>
+              Ver Projetos
+            </a>
+            <a class="btn btn--secondary" href="#contato">
+              <i class="fa-solid fa-paper-plane"></i>
+              Contato
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta-card">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <span class="meta-card__label">Foco</span>
+                <span class="meta-card__value">Soluções Digitais</span>
+              </div>
+            </div>
+
+            <div class="meta-card">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <span class="meta-card__label">Formação</span>
+                <span class="meta-card__value">SENAI</span>
+              </div>
+            </div>
+
+            <div class="meta-card">
+              <i class="fa-solid fa-rocket"></i>
+              <div>
+                <span class="meta-card__label">Perfil</span>
+                <span class="meta-card__value">Evolução constante</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card lateral premium -->
+        <aside class="hero__panel reveal" aria-label="Resumo rápido">
+          <div class="panel">
+            <div class="panel__top">
+              <div class="panel__avatar" aria-hidden="true">
+                <span>GO</span>
+              </div>
+              <div class="panel__info">
+                <p class="panel__name">Gabriel Oliveira Duarte</p>
+                <p class="panel__role">Dev em formação • Back-end</p>
+              </div>
+            </div>
+
+            <div class="panel__divider"></div>
+
+            <ul class="panel__list">
+              <li><i class="fa-solid fa-check"></i> APIs & Integrações</li>
+              <li><i class="fa-solid fa-check"></i> Banco de dados (SQL/MySQL)</li>
+              <li><i class="fa-solid fa-check"></i> Projetos com foco em produto</li>
+              <li><i class="fa-solid fa-check"></i> Código organizado e escalável</li>
+            </ul>
+
+            <div class="panel__divider"></div>
+
+            <div class="panel__actions">
+              <a class="btn btn--ghost btn--full" href="#contato">
+                <i class="fa-solid fa-handshake"></i>
+                Vamos conversar
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- =========================================================
+      SOBRE MIM (foto + texto lado a lado)
+    ========================================================== -->
+    <section class="container section" id="sobre" aria-label="Seção sobre mim">
+      <div class="section__head reveal">
+        <h2 class="section__title">Sobre Mim</h2>
+        <p class="section__desc">
+          Um pouco sobre quem eu sou, o que me motiva e como eu penso tecnologia.
+        </p>
+      </div>
+
+      <div class="about reveal">
+        <div class="about__photo-wrap">
+          <div class="neon-ring" aria-hidden="true"></div>
+          <img
+            class="about__photo"
+            src="assets/img/duarte.jpeg"
+            alt="Foto de Gabriel Oliveira Duarte"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="about__content">
+          <div class="tabs" role="tablist" aria-label="Alternar versão do texto">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="natural">
+              Texto natural
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="profissional">
+              Texto profissional
+            </button>
+          </div>
+
+          <!-- Texto NATURAL -->
+          <div class="tab-panel is-active" id="tab-natural" role="tabpanel">
+            <p>
+              Sou o Gabriel Oliveira Duarte, estudante de Desenvolvimento de Sistemas, e curto muito entender
+              como as coisas funcionam “por trás”, especialmente no <strong>back-end</strong>.
+              Também tenho grande interesse na área de <strong>dados</strong>, explorando como informações podem gerar insights
+              e melhorar a tomada de decisões.
+              Gosto de transformar ideias em soluções que realmente ajudam no dia a dia, com organização e atenção aos detalhes.
+            </p>
+
+            <p>
+              No SENAI e nos meus projetos, venho evoluindo bastante em lógica, banco de dados, análise de dados e construção de APIs.
+              Eu me motivo por desafios, aprendizado constante e por ver um sistema funcionando bem, do jeito certo.
+              Em breve, iniciarei a graduação em <strong>Engenharia</strong>, buscando aprofundar ainda mais meus conhecimentos
+              e ampliar minha formação na área tecnológica.
+            </p>
+
+            <div class="mini-icons" aria-label="Destaques">
+              <span class="mini-pill"><i class="fa-solid fa-school"></i> SENAI</span>
+              <span class="mini-pill"><i class="fa-solid fa-server"></i> Back-end</span>
+              <span class="mini-pill"><i class="fa-solid fa-database"></i> Dados</span>
+              <span class="mini-pill"><i class="fa-solid fa-arrow-trend-up"></i> Evolução</span>
+              <span class="mini-pill"><i class="fa-solid fa-layer-group"></i> Projetos</span>
+            </div>
+          </div>
+
+          <!-- Texto PROFISSIONAL -->
+          <div class="tab-panel" id="tab-profissional" role="tabpanel" hidden>
+            <p>
+              Sou <strong>Gabriel Oliveira Duarte</strong>, estudante de Desenvolvimento de Sistemas, com foco em
+              <strong>Back-end</strong>, e interesse crescente na área de
+              <strong>Dados</strong>. Busco construir soluções robustas, seguras e bem estruturadas, com atenção a desempenho,
+              escalabilidade e clareza do código, além de extrair valor de informações por meio da análise e organização de dados.
+            </p>
+
+            <p>
+              Possuo experiência prática em projetos acadêmicos e pessoais envolvendo APIs, banco de dados e interfaces responsivas,
+              sempre aplicando boas práticas de desenvolvimento e mentalidade de melhoria contínua.
+              Em breve, iniciarei a graduação em <strong>Engenharia</strong>, com o objetivo de aprofundar minha base técnica
+              e ampliar minha capacidade de desenvolver soluções complexas e inovadoras.
+              Meu objetivo é evoluir rapidamente e contribuir com entregas consistentes em equipes de tecnologia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      PROJETOS (cards modernos)
+    ========================================================== -->
+    <section class="container section" id="projetos" aria-label="Seção de projetos">
+      <div class="section__head reveal">
+        <h2 class="section__title">Meus Projetos</h2>
+        <p class="section__desc">
+          Alguns projetos que mostram minha evolução, organização e estilo de desenvolvimento.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Projeto 1 -->
+<!-- Projeto 1 -->
+<article class="project-card reveal">
+  <div class="project-card__top">
+    <h3>Projeto SAGA SENAI</h3>
+    <span class="project-card__badge">Projeto acadêmico</span>
+  </div>
+
+  <p class="project-card__desc">
+    Este trabalho aborda o Sistema de Gestão Ambiental (SGA) aplicado à área de TI, mostrando como empresas de tecnologia podem reduzir impactos como consumo excessivo de energia e descarte de lixo eletrônico. Com base em normas da ISO, o projeto destaca ações simples e sustentáveis que ajudam a preservar o meio ambiente e melhorar a organização da empresa.
+  </p>
+
+  <div class="tags" aria-label="Tecnologias do projeto">
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">MySQL</span>
+  </div>
+
+  <div class="project-card__actions">
+    <a
+      class="btn btn--ghost"
+      href="https://github.com/Gabriel-Oliveira-Duarte/Projeto-Saga-SENAI"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
+
+    <a class="btn btn--primary" href="#contato">
+      <i class="fa-solid fa-arrow-right"></i> Falar sobre
+    </a>
+  </div>
+</article>
+
+        <!-- Projeto 2 -->
+        <article class="project-card reveal">
+          <div class="project-card__top">
+            <h3>World Guessing Game (Ranking Edition)</h3>
+            <span class="project-card__badge">Game + Ranking</span>
+          </div>
+
+          <p class="project-card__desc">
+            Jogo de adivinhação com pontuação e <strong>sistema de ranking</strong>, incentivando competição e progresso do usuário.
+          </p>
+
+          <div class="tags" aria-label="Tecnologias do projeto">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Lógica</span>
+          </div>
+
+          <div class="project-card__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gabriel-Oliveira-Duarte/world_guessing_game" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a class="btn btn--primary" href="#contato">
+              <i class="fa-solid fa-trophy"></i> Ver detalhes
+            </a>
+          </div>
+        </article>
+
+        <!-- Projeto 3 — ANDA LOGO / Fila Digital (no lugar do "Projetos Extras") -->
+        <article class="project-card reveal">
+          <div class="project-card__top">
+            <h3>ANDA LOGO — Fila Digital</h3>
+            <span class="project-card__badge">Sistema completo</span>
+          </div>
+
+          <p class="project-card__desc">
+            Sistema de gerenciamento de filas com <strong>QR Code</strong>, painel administrativo,
+            acompanhamento em tempo real e integração entre front-end, back-end e banco de dados.
+            Desenvolvido para organizar atendimentos e reduzir o tempo de espera em estabelecimentos.
+          </p>
+
+          <div class="tags" aria-label="Tecnologias do projeto">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+
+          <div class="project-card__actions">
+            <a class="btn btn--ghost"
+               href="https://github.com/davianpup/fila_digital_TechPrime"
+               target="_blank" rel="noopener">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a class="btn btn--primary" href="#contato">
+              <i class="fa-solid fa-arrow-right"></i> Falar sobre
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SKILLS (hard: barras animadas | soft: tags glow)
+    ========================================================== -->
+    <section class="container section" id="skills" aria-label="Seção de habilidades">
+      <div class="section__head reveal">
+        <h2 class="section__title">Skills</h2>
+        <p class="section__desc">
+          Hard skills com barras animadas e soft skills.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Hard skills -->
+        <div class="glass-card reveal">
+          <h3 class="card-title">
+            <i class="fa-solid fa-code"></i> Hard Skills
+          </h3>
+
+          <!-- Dica: ajuste os data-level no HTML, anima no JS -->
+          <div class="skill">
+            <div class="skill__top">
+              <span>HTML</span><span class="skill__pct">85%</span>
+            </div>
+            <div class="skill__bar" data-level="85">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>CSS</span><span class="skill__pct">78%</span>
+            </div>
+            <div class="skill__bar" data-level="78">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>JavaScript</span><span class="skill__pct">72%</span>
+            </div>
+            <div class="skill__bar" data-level="72">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>Bootstrap</span><span class="skill__pct">70%</span>
+            </div>
+            <div class="skill__bar" data-level="70">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>Python</span><span class="skill__pct">75%</span>
+            </div>
+            <div class="skill__bar" data-level="75">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>Java</span><span class="skill__pct">60%</span>
+            </div>
+            <div class="skill__bar" data-level="60">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>SQL</span><span class="skill__pct">74%</span>
+            </div>
+            <div class="skill__bar" data-level="74">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>MySQL</span><span class="skill__pct">70%</span>
+            </div>
+            <div class="skill__bar" data-level="70">
+              <span class="skill__fill"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft skills -->
+        <div class="glass-card reveal">
+          <h3 class="card-title">
+            <i class="fa-solid fa-people-group"></i> Soft Skills
+          </h3>
+
+          <div class="soft-tags" aria-label="Soft skills">
+            <span class="soft-tag">Trabalho em equipe</span>
+            <span class="soft-tag">Liderança</span>
+            <span class="soft-tag">Paciência</span>
+            <span class="soft-tag">Determinação</span>
+            <span class="soft-tag">Comunicação</span>
+            <span class="soft-tag">Proatividade</span>
+            <span class="soft-tag">Organização</span>
+            <span class="soft-tag">Responsabilidade</span>
+            <span class="soft-tag">Aprendizado rápido</span>
+            <span class="soft-tag">Resolução de problemas</span>
+            <span class="soft-tag">Adaptabilidade</span>
+          </div>
+
+          <div class="soft-note">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <p>
+              Gosto de comunicação objetiva, organização e melhoria contínua.
+              Trabalho bem com feedback e prazos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      FORMAÇÃO & FERRAMENTAS
+    ========================================================== -->
+    <section class="container section" id="formacao" aria-label="Seção de formação e ferramentas">
+      <div class="section__head reveal">
+        <h2 class="section__title">Formação & Ferramentas</h2>
+        <p class="section__desc">
+          Minha base acadêmica e o stack de ferramentas que uso no dia a dia.
+        </p>
+      </div>
+
+      <div class="two-cols">
+        <div class="glass-card reveal">
+          <h3 class="card-title">
+            <i class="fa-solid fa-graduation-cap"></i> Formação
+          </h3>
+
+          <ul class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__title">Ensino médio completo</p>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__title">Técnico em Desenvolvimento de Sistemas – SENAI</p>
+
+                <p class="timeline__desc">
+                  Minha formação técnica (em andamento) é focada na prática, com desenvolvimento de projetos envolvendo lógica de programação, banco de dados e criação de soluções digitais. Ao longo do curso, venho adquirindo experiência desde o planejamento até a implementação de sistemas, utilizando boas práticas de programação e ferramentas atuais do mercado.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glass-card reveal">
+          <h3 class="card-title">
+            <i class="fa-solid fa-toolbox"></i> Ferramentas
+          </h3>
+
+          <div class="tools">
+            <div class="tool">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <p class="tool__name">VS Code</p>
+                <p class="tool__desc">Ambiente principal de desenvolvimento</p>
+              </div>
+            </div>
+
+            <div class="tool">
+              <i class="fa-solid fa-mug-hot"></i>
+              <div>
+                <p class="tool__name">NetBeans</p>
+                <p class="tool__desc">Projetos Java e organização acadêmica</p>
+              </div>
+            </div>
+
+            <div class="tool">
+              <i class="fa-solid fa-database"></i>
+              <div>
+                <p class="tool__name">MySQL Workbench</p>
+                <p class="tool__desc">Modelagem e consultas SQL</p>
+              </div>
+            </div>
+
+            <div class="tool">
+              <i class="fa-brands fa-git-alt"></i>
+              <div>
+                <p class="tool__name">Git</p>
+                <p class="tool__desc">Versionamento no dia a dia</p>
+              </div>
+            </div>
+
+            <div class="tool">
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <p class="tool__name">GitHub</p>
+                <p class="tool__desc">Repositórios, colaboração e portfólio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CONTATO (Call to Action)
+    ========================================================== -->
+    <section class="container section" id="contato" aria-label="Seção de contato">
+      <div class="contact reveal">
+        <div class="contact__head">
+          <h2 class="section__title">Contato</h2>
+          <p class="section__desc">
+            Curtiu meu perfil? Posso te mostrar mais detalhes dos projetos e como penso soluções.
+          </p>
+        </div>
+
+        <div class="contact__actions">
+          <!-- Substitua pelos seus links reais -->
+          <a class="icon-btn" href="https://github.com/Gabriel-Oliveira-Duarte" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a class="icon-btn" href="https://linkedin.com/in/gabriel-oliveira-duarte-61a70a213/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <!-- Botão mailto com glow -->
+          <a
+            href="mailto:gabrieloliveiraduarte14@gmail.com?subject=Oportunidade&body=Olá! Vi seu portfólio e gostaria de conversar com você."
+            class="btn btn--primary btn--contact"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            Contate-me agora
+          </a>
+        </div>
+
+        <p class="contact__foot">
+          <span class="dot"></span>
+          Respondo rápido • Vamos construir algo forte
+        </p>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Gabriel Oliveira Duarte. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Botão flutuante: voltar ao topo -->
+    <button id="toTop" class="to-top" type="button" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </main>
+
+  <!-- ScrollReveal (biblioteca leve) -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
